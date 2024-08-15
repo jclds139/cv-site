@@ -1,7 +1,7 @@
 name: Deploy website to GitHub Pages
 
 env:
-  WC_HUGO_VERSION: '0.126.3'
+  WC_HUGO_VERSION: '0.132.1'
 
 on:
   # Trigger the workflow every time you push to the `main` branch
@@ -31,6 +31,7 @@ jobs:
       with:
           # Fetch history for Hugo's .GitInfo and .Lastmod
         fetch-depth: 0
+        lfs: true
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2
       with:
